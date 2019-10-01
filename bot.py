@@ -22,9 +22,10 @@ def corpo(msg):
             bot.sendMessage(chat_id, """
 Bem vindo calouro, me chamo AssiS, e os meus comandos são os seguintes:
 
-*/listar* = Fotos que firam salvas.
+*/listar* = Fotos que foram salvas.
 */onb* = Horário do onibus.
 */prof* = Ficha dos professores.
+*/estado* = Estado emocional
           """
                             , parse_mode='Markdown')
         elif texto == 'oi':
@@ -33,6 +34,8 @@ Bem vindo calouro, me chamo AssiS, e os meus comandos são os seguintes:
             enviarFotosData(texto, msg, bot, chat_id)
         elif texto == '/listar':
             geraComandosFotos(bot, msg, chat_id)
+        elif texto == 'estado':
+            bot.sendMessage(chat_id, "Estou triste!")
         elif texto == '/onb':
             horaOnibus(bot, msg, chat_id)
         elif texto == '/prof':
