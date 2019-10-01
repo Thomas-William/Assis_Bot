@@ -25,12 +25,15 @@ Bem vindo calouro, me chamo AssiS, e os meus comandos são os seguintes:
 */listar* = Fotos que firam salvas.
 */onb* = Horário do onibus.
 */prof* = Ficha dos professores.
+*/estado* = Estado mental.
           """
                             , parse_mode='Markdown')
         elif texto == 'oi':
             bot.sendMessage(chat_id, "Oi!!!")
         elif recebeComandoFotos(texto, msg):
             enviarFotosData(texto, msg, bot, chat_id)
+        elif texto == 'estado':
+            bot.sendMessage(chat_id, "Estou triste!")    
         elif texto == '/listar':
             geraComandosFotos(bot, msg, chat_id)
         elif texto == '/onb':
